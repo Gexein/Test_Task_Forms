@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('./assets/fonts/SFProText-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('./assets/fonts/SFProText-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('./assets/fonts/SFProText-Heavy.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@keyframes showForm {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.showForm {
+  animation: showForm 1s both;
+}
+
+.otp-group .ant-input {
+  height: 60px;
+  width: 52px;
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+}
+
+@media (max-width: 420px) {
+  .otp-group .ant-input {
+    height: 40px;
+    width: 34px;
+  }
+}
+
+:root {
+  --font: "SF Pro Text", sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font);
+    background-color: #f5f5f5;
+    ;
+  }
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:where(fieldset[class]) {
+  border: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+
+html {
+  height: 100%;
+}
+
+label,
+button {
+  cursor: pointer
+}
+
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  font-family: inherit;
+  color: inherit;
+}
+
+body {
+  min-height: 100vh;
+}
